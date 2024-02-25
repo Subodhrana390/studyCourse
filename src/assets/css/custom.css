@@ -1,0 +1,29 @@
+/* ------------------- *\
+    #CUSTOM PROPERTY
+\* ------------------- */
+:root {
+  /**
+    * Color 
+    */
+
+  /* Light Theme */
+  --light-background: hsl(0, 0%, 96%);
+  --on-light-background: hsl(210, 16.67%, 97.65%);
+  --font-primary: hsl(270.7, 57.33%, 85.29%);
+  --btn-primary: hsl(341.5, 98.52%, 73.53%);
+  --tag-primary: hsl(181.76, 26.98%, 49.41%);
+  --tag-secondary: hsl(286.1, 77.36%, 58.43%);
+  --tag-tertiory: hsl(342.95, 100%, 65.49%);
+  --overlay-primary: hsl(251.35, 46.84%, 53.53%);
+  --overlay-secondary: rgb(85, 86, 84);
+
+  /* Dark Theme */
+  --dark-background: hsl(0, 0%, 10%);
+
+  /* Font Family */
+  --font-primary: "Poppins", serif;
+
+  /* Others */
+  --header-height: 80px;
+  --mobile-nav-height: 100vh;
+}

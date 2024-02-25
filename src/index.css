@@ -1,0 +1,208 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+:root {
+  --blue: #007bff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: #fe79a2;
+  --secondary: #1545cb;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.root {
+  background-image: url("./assets/img/background.jpg");
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.navbar {
+  position: fixed;
+  background-color: transparent;
+  z-index: 1;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.navbar ul li {
+  color: #fff;
+}
+.navbar.scrolled {
+  background-color: #fff;
+}
+
+.navbar.scrolled ul li {
+  color: #000;
+}
+
+.navbar.scrolled .theme-switch,
+.navbar.scrolled .search-wrapper,
+.navbar.scrolled .login-section {
+  color: black;
+}
+
+.mobile-nav {
+  position: fixed;
+  width: 0;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: -1;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.mobile-nav.flex {
+  opacity: 1;
+  width: 100%;
+}
+.courses {
+  height: 100%;
+  z-index: 0;
+}
+
+.courseimg {
+  filter: blur(2px);
+}
+
+.Course:hover .course-img img {
+  transform: scale(1.25);
+}
+
+.course-img {
+  overflow: hidden;
+}
+
+.course-img img {
+  transform: scale(1);
+  transition: transform 500ms ease-in-out;
+}
+
+.Facilites_section {
+  width: 70vw;
+}
+
+.latest_news {
+  overflow-x: auto;
+}
+.latest_news::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 10px solid #f3f3f3; /* Light grey */
+  border-top: 10px solid #383636; /* Blue */
+  border-radius: 50%;
+  animation: spinner 1.5s linear infinite;
+}
+
+.spinner-container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 350px;
+}
+
+.curve {
+  position: absolute;
+  bottom: -30px;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  z-index: 0;
+}
+
+.banner-info-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 25%;
+  display: block;
+  padding-inline: 10px;
+  text-align: center;
+  z-index: 1;
+}
+
+.banner-info-bg h1 {
+  font-size: 38px;
+  line-height: 30px;
+}
+
+@media screen and (min-width: 480px) {
+  .banner-info-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 25%;
+    display: block;
+    padding-inline: 10%;
+    text-align: center;
+  }
+  .banner-info-bg h1 {
+    line-height: 60px;
+    font-size: 70px;
+    color: white;
+    font-weight: bold;
+  }
+}
+
+.banner-info-bg p {
+  font-size: 16px;
+  color: white;
+  font-weight: 700;
+}
+
+.overlay {
+  background: rgb(123, 90, 200, 0.9);
+}
